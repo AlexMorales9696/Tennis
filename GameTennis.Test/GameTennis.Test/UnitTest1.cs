@@ -1,14 +1,57 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿/*“Love”, “Fifteen”, “Thirty”, and “Forty”*/
+using NUnit.Framework;
 using System;
 
 namespace GameTennis.Test
 {
-    [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
-        public void TestMethod1()
+        private TennisGame _partita;
+        [SetUp]
+        public void Setup()
+    {
+            _partita = new TennisGame();
+    }
+        [TestCase("Forty;Forty", "Deuce")]
+
+        public void Score_Deuce(string input,string expected)
         {
+           Assert.AreEqual(expected,_partita.Pareggio(input));
+           
+        }
+
+        [TestCase("Forty- Thirty","Advantage1")]
+        [TestCase("Thirty-Forty", "Advantage2")]
+        public void Score_Vantaggio(string input ,string expected)
+        {
+            Assert.AreEqual(expected, _partita.Vantaggio(input));
+        }
+
+        [TestCase("love;Fifteen", "love;Fifteen")]
+        [TestCase("Fifteen;love", "Fifteen;love")]
+        [TestCase("Thirty;love", "Thirty;love")]
+
+        public void Score_(string input, string expected)
+        {
+            Assert.AreEqual(expected, _partita.scor_(input));
+        }
+    }
+
+    internal class TennisGame
+    {
+        internal object Pareggio(string input)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal double scor_(string input)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal double Vantaggio(string input)
+        {
+            throw new NotImplementedException();
         }
     }
 }
