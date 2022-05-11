@@ -20,8 +20,8 @@ namespace GameTennis.Test
            
         }
 
-        [TestCase("Forty- Thirty","Advantage1")]
-        [TestCase("Thirty-Forty", "Advantage2")]
+        [TestCase("Forty-4","Advantage2")]
+        [TestCase("4-Forty", "Advantage1")]
         public void Score_Vantaggio(string input ,string expected)
         {
             Assert.AreEqual(expected, _partita.Vantaggio(input));
