@@ -8,17 +8,17 @@ public class TennisGame
 {
     
 
-    internal double Punteggio(Tuple<string> tupla)
+    internal double Punteggio(Tuple<string,string>tupla)
     {
         throw new NotImplementedException();
     }
 
-    internal double Vantaggio(Tuple<string> tupla)
+    internal double Vantaggio(Tuple<string,string>tupla)
     {
         throw new NotImplementedException();
     }
 
-    internal double Pareggio(Tuple<string> tupla)
+    internal double Pareggio(Tuple<string, string>tupla)
     {
         throw new NotImplementedException();
     }

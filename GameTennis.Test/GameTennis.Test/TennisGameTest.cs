@@ -14,7 +14,7 @@ namespace GameTennis.Test
     }
         [TestCase("Forty,Forty", "Deuce")]
 
-        public void Score_Deuce(Tuple<string>input,string expected)
+        public void Score_Deuce(Tuple<string,string>input,string expected)
         {
            Assert.AreEqual(expected,_partita.Pareggio(input));
            
@@ -22,7 +22,7 @@ namespace GameTennis.Test
 
         [TestCase("Forty,4","Advantage,2")]
         [TestCase("4,Forty", "Advantage,1")]
-        public void Score_Vantaggio(Tuple<string>input,string expected)
+        public void Score_Vantaggio(Tuple<string, string>input, string expected)
         {
             Assert.AreEqual(expected, _partita.Vantaggio(input));
         }
@@ -31,7 +31,7 @@ namespace GameTennis.Test
         [TestCase("Fifteen,love", "Fifteen,love")]
         [TestCase("Thirty,love", "Thirty,love")]
 
-        public void Score_Punteggio(Tuple<string>input, string expected)
+        public void Score_Punteggio(Tuple<string, string>input, string expected)
         {
             Assert.AreEqual(expected, _partita.Punteggio(input));
         }
